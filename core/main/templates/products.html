@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+ 
+{% block content %}
+    <!--Main content-->
+    <section class="container margin-bottom-50">
+      <div class="tm-overflow-hidden row">
+        <div class="tm-gallery col-lg-9 col-md-9 col-sm-8 col-xs-12">
+          <h3 class="tm-gallery-title">Toyota (53)</h3>   
+          {% for i in carmodel %}       
+          <div class="tm-item-container">
+            <img src="{{i.image.url}}" alt="Image">
+            <p class="tm-item-description">{{i.title}}</p><hr>
+            <div class="tm-item-price-container">
+              <span class="tm-item-price">{{i.price}}</span>
+              <a href="#" class="tm-item-link">
+                <span class="tm-item-action">Add to Cart</span>
+                <img src="{{i.imgpng.url}}" class="tm-item-add-icon" alt="Image">
+              </a>
+            </div>
+          </div>
+          {% endfor %}
+          <div class="tm-item-container">
+            <img src="img/2.jpg" alt="Image">
+            <p class="tm-item-description">pellentesque eu, pretium quissem</p><hr>
+            <div class="tm-item-price-container">
+              <span class="tm-item-price">$ 34,000</span>
+              <a href="#" class="tm-item-link">
+                <span class="tm-item-action">Add to Cart</span>
+                <img src="img/plus.png" class="tm-item-add-icon" alt="Image">
+              </a>
+            </div>   
+          </div>
+          <div class="tm-item-container">
+            <img src="img/2.jpg" alt="Image">
+            <p class="tm-item-description">pellentesque eu, pretium quissem</p><hr>
+            <div class="tm-item-price-container">
+              <span class="tm-item-price">$ 65,000</span>
+              <a href="#" class="tm-item-link">
+                <span class="tm-item-action">Add to Cart</span>
+                <img src="img/plus.png" class="tm-item-add-icon" alt="Image">
+              </a>
+            </div>         
+          </div>
+          <div class="tm-item-container">
+            <img src="img/2.jpg" alt="Image">
+            <p class="tm-item-description">pellentesque eu, pretium quissem</p><hr>
+            <div class="tm-item-price-container">
+              <span class="tm-item-price">$ 20,000</span>
+              <a href="#" class="tm-item-link">
+                <span class="tm-item-action">Add to Cart</span>
+                <img src="img/plus.png" class="tm-item-add-icon" alt="Image">
+              </a>
+            </div>            
+          </div>
+          <div class="tm-item-container">
+            <img src="img/2.jpg" alt="Image">
+            <p class="tm-item-description">pellentesque eu, pretium quissem</p><hr>
+            <div class="tm-item-price-container">
+              <span class="tm-item-price">$ 134,000</span>
+              <a href="#" class="tm-item-link">
+                <span class="tm-item-action">Add to Cart</span>
+                <img src="img/plus.png" class="tm-item-add-icon" alt="Image">
+              </a>
+            </div>            
+          </div>
+          <div class="tm-item-container">
+            <img src="img/2.jpg" alt="Image">
+            <p class="tm-item-description">pellentesque eu, pretium quissem</p><hr>
+            <div class="tm-item-price-container">
+              <span class="tm-item-price">$ 55,000</span>
+              <a href="#" class="tm-item-link">
+                <span class="tm-item-action">Add to Cart</span>
+                <img src="img/plus.png" class="tm-item-add-icon" alt="Image">
+              </a>
+            </div>            
+          </div>
+          <div class="tm-item-container">
+            <img src="img/2.jpg" alt="Image">
+            <p class="tm-item-description">pellentesque eu, pretium quissem</p><hr>
+            <div class="tm-item-price-container">
+              <span class="tm-item-price">$ 20,000</span>
+              <a href="#" class="tm-item-link">
+                <span class="tm-item-action">Add to Cart</span>
+                <img src="img/plus.png" class="tm-item-add-icon" alt="Image">
+              </a>
+            </div>            
+          </div>
+          <div class="tm-item-container">
+            <img src="img/2.jpg" alt="Image">
+            <p class="tm-item-description">pellentesque eu, pretium quissem</p><hr>
+            <div class="tm-item-price-container">
+              <span class="tm-item-price">$ 134,000</span>
+              <a href="#" class="tm-item-link">
+                <span class="tm-item-action">Add to Cart</span>
+                <img src="img/plus.png" class="tm-item-add-icon" alt="Image">
+              </a>
+            </div>            
+          </div>
+          <div class="tm-item-container">
+            <img src="img/2.jpg" alt="Image">
+            <p class="tm-item-description">pellentesque eu, pretium quissem</p><hr>
+            <div class="tm-item-price-container">
+              <span class="tm-item-price">$ 55,000</span>
+              <a href="#" class="tm-item-link">
+                <span class="tm-item-action">Add to Cart</span>
+                <img src="img/plus.png" class="tm-item-add-icon" alt="Image">
+              </a>
+            </div>            
+          </div>
+        </div>
+        <aside class="tm-gallery-aside col-lg-3 col-md-3 col-sm-4 col-xs-12">
+          <nav class="tm-gallery-nav">
+            <h2 class="tm-gallery-nav-title">Category <i class="fa fa-caret-up"></i></h2>
+            <ul>
+              {% for i in products %}
+              <li class="active">
+                <a href="#">
+                  <img src="{{i.image.url}}" class="tm-gallery-list-img" alt="Image">{{i.title}}
+                  <i class="fa fa-caret-right tm-gallery-list-fa"></i>
+                </a>
+              </li>
+              {% endfor %}
+              </li>
+            </ul>
+          </nav>
+          {% for i in callus %}
+          <div class="tm-call-us">
+            <h3 class="text-uppercase tm-call-us-title">{{i.title}}</h3>
+            <a href="tel:" class="tm-call-us-link">{{i.tell}}</a>
+          </div>  
+          {% endfor %}  
+        </aside>
+      </div>
+
+      <!--banner-->
+    </section> <!-- Main content -->
+{% endblock %}
